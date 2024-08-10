@@ -348,7 +348,6 @@ button{cursor: pointer;}
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             width: 90%;
             max-width: 1200px;
-            margin: 20px auto;
         }
 
         .grid-item {
