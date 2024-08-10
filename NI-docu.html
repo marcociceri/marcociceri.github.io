@@ -1,48 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image and Video Grid</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
+  <meta charset="utf-8">
+  <title>Marco Ciceri</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .grid-container {
-            display: grid;
-            gap: 10px;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-        .grid-item {
-            position: relative;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            overflow: hidden;
-            background-color: #000;
-        }
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 
-        .grid-item img,
-        .grid-item iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+  <meta name="theme-color" content="#fafafa">
 </head>
+
+    
 <body>
     <div class="grid-container">
         <div class="grid-item">
