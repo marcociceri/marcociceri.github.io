@@ -188,7 +188,7 @@ a {
    ========================================================================== */
 
 nav {
-            padding: 10px;
+            padding: 6% 0% 0% 0%;
         }
 nav ul {
             list-style: none;
@@ -208,9 +208,6 @@ nav ul li a {
 nav ul li a:hover {
             color: #9c9c9c;
         }
-menu24 {
-         margin: 1em;
-         }
 
 
 .description {
