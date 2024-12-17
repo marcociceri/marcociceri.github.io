@@ -209,6 +209,12 @@ a {
   height: 100%;
 }
 
+.testi2 {
+  margin: 1em 1em 1em 0em;
+  font-size:14px;
+  max-width: 600px;
+  }
+
 .testi1 {
   margin: 1em 1em 5em 0em;
   font-size:14px;
