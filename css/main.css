@@ -224,6 +224,12 @@ nav ul li a:hover {
 }
 
 
+.menu24 {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+
 
 .description {
   max-width: 70%;
@@ -302,12 +308,8 @@ nav ul li a:hover {
 
 
 
-/* Optional: Add margin to "About" link so it doesn't hug the menu */
-.about {
-  display: block;
-  margin-top: 2rem;
-  text-align: center; /* or left/right depending on design */
-}
+
+
 
 
 .about-txt {
@@ -517,7 +519,7 @@ button{cursor: pointer;}
   body {padding: 3%;}
   .main-blurb {font-size: 28px;}
   .main-blurb-i {font-size: 28px;}
-  .about {font-size: 26px;}
+ /* .about {font-size: 26px;}*/
   .menu {font-size: 14px; margin-left: 16px;}
   .menu-i {font-size: 14px; margin-left: 16px;}
   .menu1 {font-size: 14px; margin-left: 16px;}
@@ -530,7 +532,7 @@ button{cursor: pointer;}
   body {padding: 2%;}
   .main-blurb {font-size: 28px;}
   .main-blurb-i {font-size: 28px;}
-  .about {font-size: 26px;}
+ /* .about {font-size: 26px;}*/
   .menu {font-size: 20px; margin-left: 16px;}
   .menu-i {font-size: 20px; margin-left: 16px;}
   .menu1 {font-size: 20px; margin-left: 16px;}
@@ -544,7 +546,7 @@ button{cursor: pointer;}
   body {padding: 2%;}
   .main-blurb {font-size: 32px;}
   .main-blurb-i {font-size: 32px;}
-  .about {font-size: 30px;}
+  /*.about {font-size: 30px;}*/
   .menu {font-size: 20px; margin-left: 16px;}
   .menu-i {font-size: 20px; margin-left: 16px;}
   .menu1 {font-size: 20px; margin-left: 16px;}
