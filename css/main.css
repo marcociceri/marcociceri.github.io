@@ -209,6 +209,21 @@ nav ul li a:hover {
             color: #9c9c9c;
         }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-bottom: 2rem; /* distance from bottom */
+}
+
+.menu24 nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
 
 .description {
   max-width: 70%;
@@ -285,8 +300,13 @@ nav ul li a:hover {
   bottom: 1em; 
 }
 
+
+
+/* Optional: Add margin to "About" link so it doesn't hug the menu */
 .about {
-  color: white;
+  display: block;
+  margin-top: 2rem;
+  text-align: center; /* or left/right depending on design */
 }
 
 
