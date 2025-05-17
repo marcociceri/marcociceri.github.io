@@ -209,6 +209,59 @@ nav ul li a:hover {
             color: #9c9c9c;
         }
 
+/* BEGINNING CGPT */
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.bg {
+  font-family: sans-serif;
+  background-color: #fafafa;
+  color: #111;
+}
+
+/* Full height flex layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Top heading */
+.main-blurb-i {
+  margin-bottom: 1rem;
+}
+
+/* Menu styles */
+.menu24 nav ul {
+  list-style: none;
+}
+
+.menu24 nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Push 'About' to the bottom */
+.about {
+  margin-top: auto;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Optional hover effect */
+.about:hover {
+  text-decoration: underline;
+}
+
+/* END CGPT */
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -217,12 +270,13 @@ nav ul li a:hover {
   padding-bottom: 2rem; /* distance from bottom */
 }
 
+/*
 .menu24 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
+*/
 
 .menu24 {
   flex-grow: 1;
