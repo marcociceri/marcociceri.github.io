@@ -519,7 +519,7 @@ button{cursor: pointer;}
   body {padding: 3%;}
   .main-blurb {font-size: 28px;}
   .main-blurb-i {font-size: 28px;}
- /* .about {font-size: 26px;}*/
+ .about {font-size: 26px;}
   .menu {font-size: 14px; margin-left: 16px;}
   .menu-i {font-size: 14px; margin-left: 16px;}
   .menu1 {font-size: 14px; margin-left: 16px;}
@@ -532,7 +532,7 @@ button{cursor: pointer;}
   body {padding: 2%;}
   .main-blurb {font-size: 28px;}
   .main-blurb-i {font-size: 28px;}
- /* .about {font-size: 26px;}*/
+ .about {font-size: 26px;}
   .menu {font-size: 20px; margin-left: 16px;}
   .menu-i {font-size: 20px; margin-left: 16px;}
   .menu1 {font-size: 20px; margin-left: 16px;}
@@ -546,7 +546,7 @@ button{cursor: pointer;}
   body {padding: 2%;}
   .main-blurb {font-size: 32px;}
   .main-blurb-i {font-size: 32px;}
-  /*.about {font-size: 30px;}*/
+  .about {font-size: 30px;}
   .menu {font-size: 20px; margin-left: 16px;}
   .menu-i {font-size: 20px; margin-left: 16px;}
   .menu1 {font-size: 20px; margin-left: 16px;}
