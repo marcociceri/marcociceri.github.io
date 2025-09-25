@@ -116,6 +116,7 @@ body {
   max-width: 1024px;
   font-family: Relatif;
   src: url(../fonts/RELATIF-Bold.ttf);
+   overflow-y: auto;
 
 }
 
