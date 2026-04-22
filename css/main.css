@@ -35,12 +35,15 @@ html {
 body {
   font-family: Relatif, Helvetica, Arial, sans-serif;
   font-weight: 500;
+  min-height: 100vh;
+}
+
+body.home {
   background-image: url('../img/bg5.jpg');
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
 }
 
 a {
@@ -125,8 +128,6 @@ textarea {
   color: #fff;
   font-weight: 700;
   font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 .main-nav ul li a:hover {
@@ -144,8 +145,6 @@ textarea {
   color: #fff;
   font-weight: 700;
   font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 .about-link:hover {
