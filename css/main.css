@@ -85,6 +85,9 @@ textarea {
 /* Header: site title, fixed height */
 .site-header {
   flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 16px;
 }
 
@@ -96,7 +99,21 @@ textarea {
   letter-spacing: 0.04em;
 }
 
-/* Nav: takes all remaining space and scrolls internally */
+/* Footer: About link, fixed height at the bottom */
+.site-footer {
+  display: none;
+}
+
+.about-link {
+  color: #fff;
+  font-weight: 700;
+  font-size: 9px;
+}
+
+.about-link:hover {
+  color: #9c9c9c;
+  opacity: 1;
+}
 .main-nav {
   flex: 1 1 0;
   overflow-y: auto;
