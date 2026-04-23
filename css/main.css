@@ -43,7 +43,6 @@ body.home {
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 a {
@@ -461,4 +460,4 @@ hr {
   tr, img { page-break-inside: avoid; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
-}
+   }
