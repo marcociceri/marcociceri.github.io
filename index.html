@@ -5,8 +5,69 @@
   <title>Marco Ciceri</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Preview image panel */
+    .preview-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .preview-panel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .preview-panel img.active {
+      opacity: 1;
+    }
+
+    /* Keep nav content above the preview */
+    .page-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Disable preview on small screens */
+    @media (max-width: 55em) {
+      .preview-panel { display: none; }
+    }
+  </style>
 </head>
 <body class="home">
+
+  <!-- Preview panel: one img per project -->
+  <div class="preview-panel" aria-hidden="true">
+    <img id="prev-overclocked"    src="img/overclocked1.jpg">
+    <img id="prev-mdp-live"       src="img/mdp1.jpg">
+    <img id="prev-huma"           src="img/huma1.jpg">
+    <img id="prev-eros-av"        src="img/eros-av1.jpg">
+    <img id="prev-hana-av"        src="img/hana-av1.jpg">
+    <img id="prev-eros-vids"      src="img/eros1.jpg">
+    <img id="prev-iv"             src="img/iv1.jpg">
+    <img id="prev-hana-vids"      src="img/hana1.jpg">
+    <img id="prev-nati-infiniti"  src="img/ni1.jpg">
+    <img id="prev-all-above"      src="img/aa7.jpg">
+    <img id="prev-human"          src="img/human1.jpg">
+    <img id="prev-fog"            src="img/fog1.jpg">
+    <img id="prev-scuro-chiaro"   src="img/sc1.jpg">
+    <img id="prev-zero-thirteen"  src="img/zt1.jpg">
+    <img id="prev-gunungan"       src="img/gunungan1.jpg">
+    <img id="prev-this"           src="img/this1.jpg">
+    <img id="prev-hmm"            src="img/hmm1.jpg">
+    <img id="prev-i-fail"         src="img/ifail1.jpg">
+    <img id="prev-reality"        src="img/reality1.jpg">
+  </div>
 
   <div class="page-container">
 
@@ -16,25 +77,25 @@
 
     <nav class="main-nav">
       <ul>
-        <li><a href="overclocked.html">Overclocked — installation</a></li>
-        <li><a href="mdp-live.html">Tell Me The Sun — live light show with Marta De Pascalis</a></li>
-        <li><a href="huma.html">Hüma Utku — Comfort of the Shadows — video</a></li>
-        <li><a href="eros-av.html">Eros — live A/V</a></li>
-        <li><a href="hana-av.html">Hana — live A/V with Andert Tysma</a></li>
-        <li><a href="eros-vids.html">Eros — Your Truth is a Lie — videos</a></li>
-        <li><a href="iv.html">Alessandro Cortini — IV — video</a></li>
-        <li><a href="hana-vids.html">Andert Tysma — HANA — videos</a></li>
-        <li><a href="nati-infiniti-av.html">Nati Infiniti — live a/v with Alessandro Cortini</a></li>
-        <li><a href="all-above.html">All Above — live light show with Grand River</a></li>
-        <li><a href="human.html">Grand River — Human — video</a></li>
-        <li><a href="fog.html">Fog — live a/v with Grand River</a></li>
-        <li><a href="scuro-chiaro.html">Alessandro Cortini — Scuro Chiaro — videos</a></li>
-        <li><a href="zero-thirteen.html">0,13% — live a/v with Grand River</a></li>
-        <li><a href="gunungan.html">Gunungan — live a/v with Lintang Radittya</a></li>
-        <li><a href="this.html">Grand River — This Was Us — video</a></li>
-        <li><a href="hmm.html">HMM — video piece</a></li>
-        <li><a href="i-fail.html">Marco Shuttle — I Fail. You Fall — video</a></li>
-        <li><a href="reality.html">Reality — installation</a></li>
+        <li><a href="overclocked.html"      data-preview="prev-overclocked">Overclocked — installation</a></li>
+        <li><a href="mdp-live.html"         data-preview="prev-mdp-live">Tell Me The Sun — live light show with Marta De Pascalis</a></li>
+        <li><a href="huma.html"             data-preview="prev-huma">Hüma Utku — Comfort of the Shadows — video</a></li>
+        <li><a href="eros-av.html"          data-preview="prev-eros-av">Eros — live A/V</a></li>
+        <li><a href="hana-av.html"          data-preview="prev-hana-av">Hana — live A/V with Andert Tysma</a></li>
+        <li><a href="eros-vids.html"        data-preview="prev-eros-vids">Eros — Your Truth is a Lie — videos</a></li>
+        <li><a href="iv.html"               data-preview="prev-iv">Alessandro Cortini — IV — video</a></li>
+        <li><a href="hana-vids.html"        data-preview="prev-hana-vids">Andert Tysma — HANA — videos</a></li>
+        <li><a href="nati-infiniti-av.html" data-preview="prev-nati-infiniti">Nati Infiniti — live a/v with Alessandro Cortini</a></li>
+        <li><a href="all-above.html"        data-preview="prev-all-above">All Above — live light show with Grand River</a></li>
+        <li><a href="human.html"            data-preview="prev-human">Grand River — Human — video</a></li>
+        <li><a href="fog.html"              data-preview="prev-fog">Fog — live a/v with Grand River</a></li>
+        <li><a href="scuro-chiaro.html"     data-preview="prev-scuro-chiaro">Alessandro Cortini — Scuro Chiaro — videos</a></li>
+        <li><a href="zero-thirteen.html"    data-preview="prev-zero-thirteen">0,13% — live a/v with Grand River</a></li>
+        <li><a href="gunungan.html"         data-preview="prev-gunungan">Gunungan — live a/v with Lintang Radittya</a></li>
+        <li><a href="this.html"             data-preview="prev-this">Grand River — This Was Us — video</a></li>
+        <li><a href="hmm.html"             data-preview="prev-hmm">HMM — video piece</a></li>
+        <li><a href="i-fail.html"           data-preview="prev-i-fail">Marco Shuttle — I Fail. You Fall — video</a></li>
+        <li><a href="reality.html"          data-preview="prev-reality">Reality — installation</a></li>
       </ul>
     </nav>
 
@@ -44,6 +105,22 @@
 
   </div>
 
+  <script>
+    const links = document.querySelectorAll('a[data-preview]');
+    let current = null;
+
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        if (current) current.classList.remove('active');
+        current = document.getElementById(link.dataset.preview);
+        if (current) current.classList.add('active');
+      });
+      link.addEventListener('mouseleave', () => {
+        if (current) current.classList.remove('active');
+        current = null;
+      });
+    });
+  </script>
+
 </body>
 </html>
-v
