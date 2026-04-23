@@ -16,6 +16,9 @@
       height: min(60vh, 450px);
       pointer-events: none;
       z-index: 0;
+    }
+
+    .preview-panel.visible {
       outline: 1px solid #ccc;
     }
 
@@ -108,6 +111,7 @@
 
   <script>
     const links = document.querySelectorAll('a[data-preview]');
+    const panel = document.querySelector('.preview-panel');
     let current = null;
 
     links.forEach(link => {
@@ -115,10 +119,12 @@
         if (current) current.classList.remove('active');
         current = document.getElementById(link.dataset.preview);
         if (current) current.classList.add('active');
+        panel.classList.add('visible');
       });
       link.addEventListener('mouseleave', () => {
         if (current) current.classList.remove('active');
         current = null;
+        panel.classList.remove('visible');
       });
     });
   </script>
