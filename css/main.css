@@ -104,17 +104,7 @@ textarea {
   display: none;
 }
 
-.about-link {
-  color: #fff;
-  font-weight: 700;
-  font-size: 9px;
-}
 
-.about-link:hover {
-  color: #9c9c9c;
-  opacity: 1;
-}
-.main-nav {
   flex: 1 1 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -144,7 +134,7 @@ textarea {
 .main-nav ul li a {
   color: #fff;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 18px;
 }
 
 .main-nav ul li a:hover {
@@ -161,7 +151,7 @@ textarea {
 .about-link {
   color: #fff;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 18px;
 }
 
 .about-link:hover {
@@ -185,13 +175,13 @@ textarea {
   .page-container { padding: 2%; }
   .site-title { font-size: 28px; }
   .main-nav ul li a { font-size: 20px; }
-  .about-link { font-size: 20px; }
+  .about-link { font-size: 24px; }
 }
 
 @media (min-width: 65em) {
   .site-title { font-size: 32px; }
   .main-nav ul li a { font-size: 20px; }
-  .about-link { font-size: 30px; }
+  .about-link { font-size: 24px; }
 }
 
 
