@@ -1,29 +1,58 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Marco Ciceri</title>
-  <meta name="description" content="">
+  <title>Marco Ciceri — About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .contact-form {
+      margin-top: 2em;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+    }
 
-  <meta name="theme-color" content="#fafafa">
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.6em 0.75em;
+      font-family: Relatif, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background: transparent;
+      color: #000;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #000;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: auto;
+      align-self: flex-start;
+      padding: 0 2em;
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 1em;
+      font-size: 14px;
+    }
+  </style>
 </head>
-
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
   <div class="main-blurb">
-    <a href="index.html"><b color="white">Marco Ciceri</b></a>
+    <a href="index.html"><b>Marco Ciceri</b></a>
   </div>
 
   <div class="top1"></div>
@@ -32,29 +61,56 @@
     <p>Hello, my name is Marco I am an Italian visual artist based in Berlin.<br>
     I work with light and video to create live shows and installations.<br>
     For five years I was part of <a class="colle" href="https://www.instagram.com/pfadfinderei_berlin/" target="_blank">Pfadfinderei</a>, previously I worked at <a class="colle" href="https://www.marshmallowlaserfeast.com/" target="_blank">Marshmallow Laser Feast</a> in London and I graduated in design and arts at the <a class="colle" href="https://www.unibz.it/" target="_blank">University of Bolzano</a>.<br>
-    For my animations, I often use automated movements created with generative software or physical motorized gears. I love to mix different media and techniques to achieve richness in the details and what I call a “flowing esthetic”.</p>
-    <p>Reach out to me at <a class="colle" href="mailto:marcoc.ttt@gmail.com">marcoc.ttt@gmail.com</a></p>
+    For my animations, I often use automated movements created with generative software or physical motorized gears. I love to mix different media and techniques to achieve richness in the details and what I call a "flowing esthetic".</p>
+
+    <p>Get in touch:</p>
+
+    <div class="contact-form">
+      <input type="text"  name="name"    placeholder="Your name"    required>
+      <input type="email" name="email"   placeholder="Your email"   required>
+      <textarea           name="message" placeholder="Your message" required></textarea>
+      <button type="button" id="send-btn">Send</button>
+      <p class="form-success" id="form-success">Thanks — I'll get back to you soon.</p>
+    </div>
   </div>
 
   <div class="links">
     <a class="colle1" href="https://www.instagram.com/marcoc.ttt/" target="_blank">INSTAGRAM</a>
     <a class="colle1" href="https://www.linkedin.com/in/marco-ciceri-19a15395/" target="_blank">LINKEDIN</a>
-    
   </div>
 
-
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
+    document.getElementById('send-btn').addEventListener('click', async () => {
+      const form = document.querySelector('.contact-form');
+      const name    = form.querySelector('[name="name"]').value.trim();
+      const email   = form.querySelector('[name="email"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
 
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const btn = document.getElementById('send-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      const res = await fetch('https://formspree.io/f/xbdqqoaq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (res.ok) {
+        form.querySelectorAll('input, textarea, button').forEach(el => el.style.display = 'none');
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Send';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
+</body>
 </html>
