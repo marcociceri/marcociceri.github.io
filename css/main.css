@@ -369,6 +369,26 @@ p {
   object-fit: cover;
 }
 
+
+/* Grid variant: images keep their original proportions, no cropping */
+.grid-container.grid-natural {
+  align-items: start;
+}
+
+.grid-natural .grid-item {
+  padding-top: 0;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.grid-natural .grid-item img {
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 /* Buttons */
 button {
   background-color: #000;
