@@ -47,6 +47,26 @@
     @media (max-width: 55em) {
       .preview-panel { display: none; }
     }
+
+    /* Permetti lo scroll quando il menu è più alto dello schermo */
+html, body {
+  height: auto !important;
+  min-height: 100%;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+.page-container {
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+  padding-bottom: 4rem; /* respiro sotto l'ultima voce */
+}
+
+/* Se lo sfondo è un'immagine sul body, resta fermo mentre scorri */
+body.home {
+  background-attachment: fixed;
+}
   </style>
 </head>
 <body class="home">
