@@ -243,11 +243,14 @@ p {
   height: 100%;
 }
 
-.videoWrapperVertical {
+
 .videoWrapperVertical {
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
+   max-width: 500px;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .videoWrapperVertical iframe {
@@ -258,14 +261,7 @@ p {
   height: 100%;
 }
 
-/* Desktop: più stretto e allineato a destra */
-@media (min-width: 900px) {
-  .videoWrapperVertical {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: 0;
-  }
-}
+
 
 .testi {
   margin: 1em 1em 1em 0;
