@@ -103,7 +103,7 @@ textarea {
   display: none;
 }
 
-
+.main-nav {
   flex: 1 1 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -272,6 +272,18 @@ p {
   margin: 1em 1em 5em 0;
   font-size: 14px;
   max-width: 600px;
+}
+
+.testi p,
+.testi1 p {
+  font-size: inherit;      /* same size as the box around it */
+  line-height: inherit;
+  margin-bottom: 1em;      /* space between paragraphs */
+}
+
+.testi p:last-child,
+.testi1 p:last-child {
+  margin-bottom: 0;        /* no extra gap after the last one */
 }
 
 .testi2 {
