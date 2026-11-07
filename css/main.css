@@ -303,6 +303,7 @@ p {
 .date {
   font-size: 10px;
   color: grey;
+   margin-top: 0.5em;
 }
 
 .colle  { text-decoration: underline; }
