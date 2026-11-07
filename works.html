@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Marco Ciceri - Works</title>
+  <meta name="description" content="Installations and video works by Marco Ciceri: an ongoing research into the stories that materials and natural elements carry with them.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    /* ---------- Works grid (same as comm-work, only affects this page) ---------- */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);   /* 3 columns on desktop */
+      gap: 12px;
+      margin: 40px 0;
+    }
+
+    .work-tile {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .work-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;          /* crops images to fill the tile evenly */
+      display: block;
+      transition: transform 0.5s ease, opacity 0.4s ease;
+    }
+
+    .work-tile .work-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .work-tile:hover img,
+    .work-tile:focus-visible img {
+      transform: scale(1.04);
+    }
+
+    .work-tile:hover .work-title,
+    .work-tile:focus-visible .work-title {
+      opacity: 1;
+    }
+
+    /* Tablet: 2 columns */
+    @media (max-width: 900px) {
+      .work-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Phone: 1 column */
+    @media (max-width: 560px) {
+      .work-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Touch screens can't hover: show the title as a bar at the bottom instead */
+    @media (hover: none) {
+      .work-tile .work-title {
+        opacity: 1;
+        inset: auto 0 0 0;
+        padding: 8px 12px;
+        justify-content: flex-start;
+        text-align: left;
+      }
+    }
+
+    /* ---------- Captions below the grid ---------- */
+    .work-captions p {
+      margin: 0 0 1.2em 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-blurb">
+    <a href="index.html"><b>Marco Ciceri</b></a>
+  </div>
+
+  <div class="top"></div>
+
+  <div class="project">
+    <div class="project-title">Works</div>
+    <div class="testi">
+      <p>My work starts from matter. Water, fire, wax, carbon, silicon: each material carries a story, written in how it moves, burns, erodes or transforms. I look at these materials up close, at the scale where an image stops describing an object and starts to behave like a living thing, and where the line between natural and technological becomes thin.</p>
+      <p>Over the years this research has taken different forms, from video and light installation to live performance, but the question stays the same: what does a material remember, and what can it tell us about ourselves? A waterfall that behaves like a character, a charcoal landscape that burns down to embers, a candle flame mirrored by its electric double, circuits that sweat under the effort of machine learning, a body before memory reduced to light and pulse.</p>
+    </div>
+  </div>
+
+  <div class="work-grid">
+
+    <a class="work-tile" href="high-light.html">
+      <img src="img/hl3.jpg" alt="High Light, light installation" loading="lazy">
+      <span class="work-title">High Light</span>
+    </a>
+
+    <a class="work-tile" href="ms-tdwnr.html">
+      <img src="img/ms-1.jpg" alt="Those Days Will Never Return, video" loading="lazy">
+      <span class="work-title">Those Days Will Never Return</span>
+    </a>
+
+    <a class="work-tile" href="huma.html">
+      <img src="img/hu-1.jpg" alt="Comfort of the Shadows, Into the Blinding Lights, video installation" loading="lazy">
+      <span class="work-title">Comfort of the Shadows, Into the Blinding Lights</span>
+    </a>
+
+    <a class="work-tile" href="overclocked.html">
+      <img src="img/overcloked-1.jpg" alt="Overclocked, video installation" loading="lazy">
+      <span class="work-title">Overclocked</span>
+    </a>
+
+    <a class="work-tile" href="human.html">
+      <img src="img/human1.jpg" alt="Human, video" loading="lazy">
+      <span class="work-title">Human</span>
+    </a>
+
+  </div>
+
+
+  <div class="testi1 work-captions">
+    <p><b>High Light</b>, 2026<br>
+    Light installation: candle, light sculpture, sensor. Metal beam, 5 × 5 cm section, height variable (min. 3 m).<br>
+    In collaboration with Axel Schoterman.</p>
+
+    <p><b>Those Days Will Never Return</b>, 2026<br>
+    Single-channel video, 16:9, stereo sound.<br>
+    Music: Marco Scipione.</p>
+
+    <p><b>Comfort of the Shadows, Into the Blinding Lights</b>, 2025<br>
+    Single-channel video, 7'31", 16:9, projection or screen, one strobe light, stereo sound.<br>
+    Music: Hüma Utku.</p>
+
+    <p><b>Overclocked</b>, 2025<br>
+    Video installation.</p>
+
+    <p><b>Human</b>, 2022<br>
+    Single-channel video, 16:9, stereo sound.<br>
+    Music: Grand River. Shot in Iceland during the SÍM residency.</p>
+
+    <p>Exhibitions and screenings:<br>
+    B Contemporary Art Gallery, Ulaanbaatar (Comfort of the Shadows, Into the Blinding Lights)<br>
+    NEO Shibuya TV, Shibuya Crossing, Tokyo (Overclocked)<br>
+    Kühlhaus, BYOB, Berlin (Overclocked)</p>
+
+    <p>Residencies:<br>
+    SÍM, Reykjavík, 2022</p>
+  </div>
+
+  <div class="footer">
+    <p>© Marco Ciceri</p>
+    <p><a class="colle" href="about.html">About</a></p>
+  </div>
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
